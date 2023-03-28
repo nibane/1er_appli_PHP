@@ -12,6 +12,6 @@ session_start()
     <title>Récapitulatif des produits</title>
 </head>
 <body>
-
+    <?php var_dump($_SESSION); ?>
 </body>
 </html>
