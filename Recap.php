@@ -1,9 +1,8 @@
 <?php
-session_start()
+session_start() 
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,12 +12,10 @@ session_start()
 </head>
 <body>
     <?php 
-    
         if(!isset($_SESSION['products']) || empty(['products'])){
             echo "<p>Aucun produit en session...</p>";
         }
-        else{
-            
+        else{         
             echo "<table>",
                     "<thead>",
                         "<tr>",
@@ -30,11 +27,18 @@ session_start()
                         "<th>",
                     "</thead>",
                     "<tbody>";
-            foreach($_SESSION['products'] as $index => $product){
 
+            foreach($_SESSION['products'] as $index => $product){
+                echo "<tr>",
+                    "<td>".$index."</td>",
+                    "<td>".$product['name']."</td>",
+                    "<td>".number_format($product['price'], 2, ",","&nbsp;")."&nbsp;.</td>",
+                    "<td>".$product['qtt']."</td>",
+                    "<td>".number_format($product['total'], 2, ",","&nbsp;")."&nbsp;.</td>",
+                    "<td>".$product['total']."</td>",
+                    "</tr>";
             }
-            echo "</tbody>",
-                "</table>";
+
 
 
             
