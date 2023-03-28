@@ -15,6 +15,8 @@ if (isset($_POST['submit'])) {
             "qtt" => $qtt,
             "total" => $price * $qtt,
         ];
+
+        $_SESSION["products"][] = $product;
     }
 }
 
