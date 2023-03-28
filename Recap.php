@@ -18,7 +18,26 @@ session_start()
             echo "<p>Aucun produit en session...</p>";
         }
         else{
+            
+            echo "<table>",
+                    "<thead>",
+                        "<tr>",
+                            "<th>#</th>",
+                            "<th>Nom</th>",
+                            "<th>Prix</th>",
+                            "<th>Quantité</th>",
+                            "<th>Total</th>",
+                        "<th>",
+                    "</thead>",
+                    "<tbody>";
+            foreach($_SESSION['products'] as $index => $product){
 
+            }
+            echo "</tbody>",
+                "</table>";
+
+
+            
         }
 
     ?>
