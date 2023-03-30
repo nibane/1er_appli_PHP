@@ -1,0 +1,5 @@
+feof : https://www.w3schools.com/php/func_filesystem_feof.asp
+fgets: https://www.w3schools.com/php/func_filesystem_feof.asp
+fread: https://www.w3schools.com/PHP/php_file_open.asp
+fwrite/fputs: https://www.w3schools.com/PHP/func_filesystem_fwrite.asp
+dirname: https://www.w3schools.com/nodejs/met_path_dirname.asp
