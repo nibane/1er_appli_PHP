@@ -11,7 +11,15 @@
 </head>
 
 <body>
+    
+    <nav>
 
+        <div><a href="Index.php">Index</a></div>
+
+        <div><a href="Recap.php">Recap</a></div>
+
+    </nav>
+    
     <h1>Ajouter un produit</h1>
     <form action="traitement.php?action=addProduct" method="post">
         <p>
