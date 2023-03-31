@@ -33,7 +33,7 @@ session_start()
                     "<td>".$index."</td>",
                     "<td>".$product['name']."</td>",
                     "<td>".number_format($product['price'], 2, ",","&nbsp;")."&nbsp;.€ </td>",
-                    "<td>".$product['qtt']."</td>",
+                    "<td><a href='traitement.php?action=baisserQtt&id=".$index."'>-</a>".$product['qtt']."<a href='traitement.php?action=augmenterQtt&id=".$index."'>+</a></td>",
                     "<td>".number_format($product['total'], 2, ",","&nbsp;")."&nbsp;.€</td>",
                     "<td>".$product['total']."</td>",
                     "</tr>";
