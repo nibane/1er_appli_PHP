@@ -23,7 +23,8 @@ session_start();
             echo "<p>Aucun produit en session...</p>";
         }
         else{         
-            echo "<table>",
+            // echo $_SESSION['symboles'],
+                "<table>",
                     "<thead>",
                         "<tr>",
                             "<th>#</th>",
@@ -54,7 +55,8 @@ session_start();
                 "<td colspan=4>Total général : </td>",
                 "<td><strong>".number_format($totalGeneral, 2,",", "&nbsp;")."&nbsp;€</strong></td>",
                 "</tr>",
-                "</tbody>";
+                "</tbody>",
+                "</table>";
 
                 
 
