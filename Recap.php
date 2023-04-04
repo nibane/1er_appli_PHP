@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+require_once "Fonction.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +22,11 @@ session_start();
     </nav>
     <?php 
     
-        // echo $_SESSION['symboles'] = "54";  ????
+        
         $symboles = (isset($_SESSION['symboles'])) ? $_SESSION['symboles'] : null;
         echo $symboles;
         unset($symboles);
+
         if(!isset($_SESSION['products']) || empty(['products'])){
             echo "<p>Aucun produit en session...</p>";
         }
@@ -53,8 +56,9 @@ session_start();
                     "<td></td>",
                     "</tr>";
                 $totalGeneral+=$product['total'];
-                $total_qtt+=$product['qtt'];
-        
+                
+                
+
             }
             echo "<tr>",
                 "<td colspan=4>Total général : </td>",
@@ -62,12 +66,11 @@ session_start();
                 "</tr>",
                 "</tbody>",
                 "</table>";
-
-                
-
             
         }
 
+    
+        echo "<p>".total_qtt()."</p>";
         
     ?>
 </body>
