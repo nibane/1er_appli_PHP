@@ -34,23 +34,25 @@ if (isset($_GET['action'])) {
                  
                  $_SESSION["products"][$_GET['id']]['qtt']++;
                  $_SESSION["products"][$_GET['id']]['total'] = $_SESSION["products"][$_GET['id']]['qtt'] * $_SESSION["products"][$_GET['id']]['price'];
-                 $_SESSION['symboles'] = "produit "." ajoutée dans le pagnier";
-                 
+                 $_SESSION['symboles'] = "produit ".$_SESSION["products"][$_GET['id']]['name']." ajoutée dans le pagnier";
+                
                 }
                 header("Location:Recap.php");
                 die();
+                break;
                 
         case "baisserQtt":
             if (isset($_GET['id'])&& isset($_SESSION["products"][$_GET['id']])){
                         
                 $_SESSION["products"][$_GET['id']]['qtt']--;
                 $_SESSION["products"][$_GET['id']]['total'] = $_SESSION["products"][$_GET['id']]['qtt'] * $_SESSION["products"][$_GET['id']]['price'];
-                $_SESSION['symboles'] = "produit retirée du pagnier";
+                $_SESSION['symboles'] = "produit ".$_SESSION["products"][$_GET['id']]['name']." retirée du pagnier";
             }
                 header("Location:Recap.php");
                 die();
+                break;
                     
-                    
+         
                     
     }
 }
