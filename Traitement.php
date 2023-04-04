@@ -51,8 +51,12 @@ if (isset($_GET['action'])) {
                 header("Location:Recap.php");
                 die();
                 break;
-                    
-         
+            
+            case "tout_supprimer":
+                unset($_SESSION['products']);
+                $_SESSION['symboles'] = "le pagnier a etait vidé";
+                header("Location:Recap.php");
+                die();
                     
     }
 }

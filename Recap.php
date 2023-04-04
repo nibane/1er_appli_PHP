@@ -45,7 +45,7 @@ require_once "Fonction.php";
                     "</thead>",
                     "<tbody>";
             $totalGeneral = 0;
-            $total_qtt = 0;
+            $tout_supprimer = 'tout supprimer';
             foreach($_SESSION['products'] as $index => $product){
                 echo "<tr>",
                     "<td>".$index."</td>",
@@ -69,9 +69,11 @@ require_once "Fonction.php";
             
         }
 
+        
+        echo "<a href='traitement.php?action=tout_supprimer'>vidée pagnier</a>";
     
         echo "<p>".total_qtt()."</p>";
-        
+
     ?>
 </body>
 </html>
