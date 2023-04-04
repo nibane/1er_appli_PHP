@@ -34,7 +34,7 @@ if (isset($_GET['action'])) {
                  
                  $_SESSION["products"][$_GET['id']]['qtt']++;
                  $_SESSION["products"][$_GET['id']]['total'] = $_SESSION["products"][$_GET['id']]['qtt'] * $_SESSION["products"][$_GET['id']]['price'];
-                 $_SESSION['message'] = "plus";
+                 $_SESSION['symboles'] = "produit "." ajoutée dans le pagnier";
                  
                 }
                 header("Location:Recap.php");
@@ -45,7 +45,7 @@ if (isset($_GET['action'])) {
                         
                 $_SESSION["products"][$_GET['id']]['qtt']--;
                 $_SESSION["products"][$_GET['id']]['total'] = $_SESSION["products"][$_GET['id']]['qtt'] * $_SESSION["products"][$_GET['id']]['price'];
-                
+                $_SESSION['symboles'] = "produit retirée du pagnier";
             }
                 header("Location:Recap.php");
                 die();
