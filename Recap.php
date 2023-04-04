@@ -19,11 +19,16 @@ session_start();
 
     </nav>
     <?php 
+    
+        // echo $_SESSION['symboles'] = "54";  ????
+        $symboles = (isset($_SESSION['symboles'])) ? $_SESSION['symboles'] : null;
+        echo $symboles;
+        unset($symboles);
         if(!isset($_SESSION['products']) || empty(['products'])){
             echo "<p>Aucun produit en session...</p>";
         }
         else{         
-            // echo $_SESSION['symboles'],
+            echo 
                 "<table>",
                     "<thead>",
                         "<tr>",
