@@ -40,7 +40,7 @@ require_once "Fonction.php";
                             "<th>Prix</th>",
                             "<th>Quantité</th>",
                             "<th>Total</th>",
-                            "<th>Action</th>",
+                            "<th>Action</th>", //a mettre icone poubelle pour suprimé un produit totalement.
                         "<th>",
                     "</thead>",
                     "<tbody>";
