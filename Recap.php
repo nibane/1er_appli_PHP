@@ -72,7 +72,7 @@ require_once "Fonction.php";
         
         echo "<a href='traitement.php?action=tout_supprimer'>vidée pagnier</a>";
     
-        echo "<p>".total_qtt()."</p>";
+        echo "<p> nombre total de produit dans le pagnier ".total_qtt()."</p>";
 
     ?>
 </body>
